@@ -1382,10 +1382,10 @@ body { background:var(--background); }
 .bh-lens-signal { margin-top:auto; color:oklch(0.55 0.02 250); font:8px var(--font-mono); letter-spacing:.07em; }
 .bh-text-link { display:inline-flex; align-items:center; gap:7px; margin-top:24px; color:var(--primary)!important; font-size:12px; font-weight:600; }
 .bh-text-link svg { width:14px; height:14px; }
-.bh-home .bh-install { display:grid; grid-template-columns:minmax(0,.9fr) minmax(460px,1.1fr); align-items:center; gap:clamp(45px,7vw,95px); }
-.bh-install-layout { grid-template-columns:repeat(12,minmax(0,1fr)); }
-.bh-install-copy { grid-column:span 6; }
-.bh-install-panel { grid-column:span 6; padding:19px; border:1px solid oklch(0.94 0.01 250 / .12); border-radius:10px; background:oklch(0.205 0.022 258); box-shadow:0 25px 70px oklch(0.03 0.01 258 / .24); }
+.bh-home .bh-install { display:block; }
+.bh-install-layout { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); align-items:center; gap:clamp(36px,6vw,78px); padding-top:55px; }
+.bh-install-copy { min-width:0; }
+.bh-install-panel { min-width:0; padding:19px; border:1px solid oklch(0.94 0.01 250 / .12); border-radius:10px; background:oklch(0.205 0.022 258); box-shadow:0 25px 70px oklch(0.03 0.01 258 / .24); }
 .bh-home .bh-install-copy > span { color:var(--primary); font-size:10px; letter-spacing:.09em; }
 .bh-home .bh-install h2 { margin:11px 0 15px; }
 .bh-home .bh-install-copy > p { max-width:440px; color:oklch(0.68 0.02 250); font-size:14px; line-height:1.75; }
@@ -1424,9 +1424,8 @@ body { background:var(--background); }
   .bh-workbench { width:min(100%,620px); }
   .bh-home #investigation,.bh-home .bh-method,.bh-home .bh-install { padding:65px 0; }
   .bh-home #investigation > div:nth-child(2) { padding:42px 0 22px; }
-  .bh-home .bh-install { display:flex; flex-direction:column; align-items:stretch; gap:28px; }
-  .bh-install-layout { grid-template-columns:1fr; }
-  .bh-install-copy,.bh-install-panel { grid-column:1 / -1; }
+  .bh-install-layout { grid-template-columns:1fr; gap:25px; padding-top:35px; }
+  .bh-install-copy,.bh-install-panel { grid-column:1; }
   .bh-install-panel { padding:15px; }
   .bh-section-heading { display:block; }
   .bh-section-heading > p { margin-top:15px; }
