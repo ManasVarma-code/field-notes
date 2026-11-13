@@ -18,7 +18,7 @@ export function MethodSection() {
       description:
         "Before proposing another software answer, survey the commercial and open-source landscape. Understand existing product paradigms, user expectations, and incumbent market barriers so you don't build a product nobody switches to.",
       engineeringImpact:
-        "Prevents building a product that already exists with 5 years of edge-case polish.",
+        "Clarifies the established products, user expectations, and open questions in the category.",
       concreteFinding:
         "e.g., Discover that Ashby and Greenhouse already solve ATS pipelines, uncovering the real need: a webhook-driven AI review layer.",
     },
@@ -30,7 +30,7 @@ export function MethodSection() {
       description:
         "Audit existing open-source libraries, APIs, and models. BeenHere inspects recent commit activity, issue velocity, architectural fit, and copyleft/AGPL licensing terms before you write bespoke code.",
       engineeringImpact:
-        "Saves weeks of custom plumbing and flags legal/licensing landmines before they enter your tree.",
+        "Checks technical fit, maintenance signals, and license terms before adoption.",
       concreteFinding:
         "e.g., Identify Docling (MIT) for document parsing; flag PyMuPDF's AGPL-3.0 terms to avoid unwanted copyleft contamination.",
     },
@@ -40,9 +40,9 @@ export function MethodSection() {
       title: "Look sideways at neighboring industries and papers.",
       icon: Lightbulb,
       description:
-        "Break out of standard keyword bubbles. Borrow battle-tested patterns from neighboring technical disciplines—such as distributed systems consensus, bioinformatics diffing, or financial ledger immutability.",
+        "Look beyond standard keyword searches for patterns from neighboring technical disciplines—such as distributed systems consensus, bioinformatics diffing, or financial ledger immutability.",
       engineeringImpact:
-        "Uncovers elegant technical solutions that standard GitHub keyword search misses entirely.",
+        "Surfaces approaches from neighboring disciplines that may transfer to the problem.",
       concreteFinding:
         "e.g., Borrow CRDT sequence algorithms originally developed for collaborative CAD to build an offline-first collaborative editor.",
     },
@@ -61,7 +61,7 @@ export function MethodSection() {
   ];
 
   const buildPostures = [
-    { name: "ADOPT", desc: "Use existing libraries or SaaS as-is when requirements match 100%." },
+    { name: "ADOPT", desc: "Use existing libraries or SaaS when their capabilities fit the requirements." },
     {
       name: "INTEGRATE",
       desc: "Build a focused value-add layer on top of established platforms via APIs.",

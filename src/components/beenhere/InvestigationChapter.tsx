@@ -41,10 +41,10 @@ const INVESTIGATION_NODES: DossierNode[] = [
           "Research technical viability and reusable prior art for an AI recruitment platform.",
       },
       {
-        name: "Baseline Cost",
-        badge: "Assumption",
+        name: "Initial scope",
+        badge: "Initial scope",
         annotation:
-          "Estimated 9–12 months to build database, security permissions, and pipeline UI.",
+          "The initial idea includes a database, permissions, candidate pipeline, and recruiter interface.",
       },
     ],
   },
@@ -58,8 +58,8 @@ const INVESTIGATION_NODES: DossierNode[] = [
     evidence: [
       {
         name: "Ashby",
-        badge: "Modern ATS Benchmark",
-        annotation: "Extensive webhooks and candidate automation APIs; high customer retention.",
+        badge: "Existing platform",
+        annotation: "Review its published integration options and documented workflows.",
       },
       {
         name: "Greenhouse / Lever",
@@ -271,15 +271,14 @@ export function InvestigationChapter() {
             <em className="text-primary italic font-normal">Not another ATS.</em>
           </h3>
           <p className="font-sans text-sm sm:text-base text-foreground/80 leading-relaxed max-w-2xl">
-            Synthesized conclusion from the Ashby precedent, Docling extraction benchmarks, and
-            PyMuPDF AGPL checkpointing: <strong>Adopt &amp; Integrate</strong>. Deliver immediate
-            value over recruiters' existing ATS webhooks instead of wasting 9 months rebuilding
-            basic candidate pipelines.
+            The examples above point toward a narrower first release: <strong>integrate</strong>
+            with existing hiring systems and evaluate document tools against the product’s needs
+            and license requirements. Confirm each integration and legal requirement before adoption.
           </p>
           <div className="pt-2 flex items-center gap-3 font-mono text-[11px] text-muted-foreground">
             <span>POSTURE: INTEGRATE</span>
             <span>·</span>
-            <span>ESTIMATED TIME SAVED: 6–9 MONTHS</span>
+            <span>DECISION: REVIEW LAYER WITH EXISTING TOOLS</span>
           </div>
         </div>
       </div>

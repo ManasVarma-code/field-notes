@@ -152,13 +152,7 @@ const STAGES: StageInfo[] = [
       {
         label: "Recommended Stack",
         value: "Docling (MIT parser) + Sentence Transformers (reranking) + FastAPI webhooks.",
-        note: "Bypasses PyMuPDF AGPL risk; avoids multi-year ATS core reconstruction.",
-      },
-      {
-        label: "Time Saved",
-        value:
-          "Estimated 6-9 months of unnecessary core ATS database & workflow engineering avoided.",
-        note: "Directly grounded in the actual verified Codex test dossier.",
+        note: "Pairs document parsing and ranking components with integrations to existing ATS platforms.",
       },
     ],
   },
@@ -307,8 +301,8 @@ export function ResearchCaseFile() {
               Build the AI review layer, <em>not another ATS.</em>
             </p>
             <span className="bh-decision-foot">
-              Conclusion drawn from verified Ashby precedent, Docling extraction benchmarks, and
-              PyMuPDF AGPL checkpointing.
+              Direction informed by the reviewed product precedents, available document tools,
+              and PyMuPDF license checkpoint.
             </span>
           </div>
 

@@ -4,6 +4,7 @@ import { SITE_CONFIG } from "@/config/site";
 describe("SITE_CONFIG validation", () => {
   it("uses the official BeenHere GitHub repository without search parameters", () => {
     expect(SITE_CONFIG.links.github).toBe("https://github.com/manasvignesh/BeenHere");
+    expect(SITE_CONFIG.links.githubWebsite).toBe("https://github.com/ManasVarma-code/field-notes");
     expect(SITE_CONFIG.links.github).not.toContain("search");
     expect(SITE_CONFIG.links.github).not.toContain("<github-owner>");
   });

@@ -221,7 +221,7 @@ function DocsPage() {
                 </div>
 
                 <div className="space-y-3">
-                  <h3 className="font-editorial text-xl text-foreground">Fastest Quickstart</h3>
+                  <h3 className="font-editorial text-xl text-foreground">Quickstart</h3>
                   <p className="text-xs text-muted-foreground font-mono">
                     Run the universal skill installer in your terminal:
                   </p>
