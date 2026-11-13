@@ -1,57 +1,74 @@
-import { ArrowDown, ArrowRight, ArrowUpRight, Check, Terminal } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Check,
+  ChevronRight,
+  CircleCheck,
+  Command,
+  FileSearch,
+  GitBranch,
+  ShieldAlert,
+} from "lucide-react";
 import { SITE_CONFIG } from "@/config/site";
 
 export function Hero() {
   return (
     <section className="bh-hero" id="top" aria-labelledby="hero-title">
       <div className="bh-hero-copy">
-        <div className="bh-hero-eyebrow">
-          <span className="bh-spark" aria-hidden="true">✳</span>
-          An open-source research skill for coding agents
-        </div>
+        <a className="bh-release-pill" href={SITE_CONFIG.links.github} target="_blank" rel="noreferrer">
+          <span className="bh-release-dot" />
+          Open source research for Codex &amp; Claude Code
+          <ArrowUpRight aria-hidden="true" />
+        </a>
         <h1 id="hero-title">
-          Don’t build it<br />
-          <em>twice.</em>
+          A better first commit<br />
+          <em>starts with research.</em>
         </h1>
         <p className="bh-hero-lede">
-          Before your agent writes code, BeenHere finds what already exists: the products,
-          repositories, research, and licensing details that can change your plan.
+          BeenHere gives your coding agent the context to build the right thing: what exists,
+          what’s worth reusing, and what could trip you up.
         </p>
         <div className="bh-hero-actions">
           <a className="bh-cta-primary" href="#invitation">
-            Add BeenHere <ArrowRight aria-hidden="true" />
+            Install BeenHere <ArrowRight aria-hidden="true" />
           </a>
           <a className="bh-cta-secondary" href="#investigation">
-            See a research run <ArrowDown aria-hidden="true" />
+            Explore a research run <ChevronRight aria-hidden="true" />
           </a>
         </div>
-        <div className="bh-hero-meta">
+        <div className="bh-hero-meta" aria-label="Product details">
           <span><Check aria-hidden="true" /> Free &amp; open source</span>
-          <span><Check aria-hidden="true" /> Runs in your agent</span>
-          <a href={SITE_CONFIG.links.github} target="_blank" rel="noreferrer">
-            Explore on GitHub <ArrowUpRight aria-hidden="true" />
-          </a>
+          <span><Check aria-hidden="true" /> Runs locally in your agent</span>
+          <span><Check aria-hidden="true" /> MIT licensed</span>
         </div>
       </div>
 
-      <aside className="bh-preview" aria-label="Example BeenHere research summary">
-        <div className="bh-preview-top">
-          <div className="bh-window-dots" aria-hidden="true"><i /><i /><i /></div>
-          <span>BEENHERE / RESEARCH</span>
-          <span className="bh-preview-live"><i /> COMPLETE</span>
+      <aside className="bh-workbench" aria-label="Example BeenHere research report">
+        <div className="bh-workbench-bar">
+          <div className="bh-workbench-brand"><span className="bh-mini-mark">B</span><span>beenhere</span></div>
+          <span className="bh-workbench-path">/ research / report.md</span>
+          <span className="bh-workbench-status"><CircleCheck aria-hidden="true" /> Complete</span>
         </div>
-        <div className="bh-preview-prompt">
-          <Terminal aria-hidden="true" />
-          <span>Research an AI recruitment platform</span>
+        <div className="bh-run-query">
+          <div className="bh-query-icon"><Command aria-hidden="true" /></div>
+          <div><span>RESEARCH REQUEST</span><p>Build an AI recruitment platform</p></div>
+          <span className="bh-query-time">04:18</span>
         </div>
-        <div className="bh-preview-rule"><span>THE SHORT VERSION</span></div>
-        <p className="bh-preview-verdict">Build the review layer.<br /><em>Don’t build another ATS.</em></p>
-        <div className="bh-preview-findings">
-          <div><span className="bh-finding-icon bh-finding-green">↗</span><p><strong>Reuse</strong><small>Docling for resume parsing</small></p><span className="bh-finding-tag">MIT</span></div>
-          <div><span className="bh-finding-icon bh-finding-amber">!</span><p><strong>Check first</strong><small>PyMuPDF has AGPL terms</small></p><span className="bh-finding-tag">LICENSE</span></div>
-          <div><span className="bh-finding-icon bh-finding-blue">◎</span><p><strong>Fit the market</strong><small>Integrate with existing ATS tools</small></p><span className="bh-finding-tag">DECISION</span></div>
+        <div className="bh-run-stream" aria-label="Completed research steps">
+          <div><span className="bh-stream-check"><Check aria-hidden="true" /></span><span>Product landscape</span><span className="bh-stream-detail">3 precedents</span></div>
+          <div><span className="bh-stream-check"><Check aria-hidden="true" /></span><span>Reusable foundations</span><span className="bh-stream-detail">Docling · MIT</span></div>
+          <div><span className="bh-stream-alert"><ShieldAlert aria-hidden="true" /></span><span>License review</span><span className="bh-stream-warning">AGPL flagged</span></div>
         </div>
-        <div className="bh-preview-bottom"><span>Evidence in. Guesswork out.</span><span>01 / 04</span></div>
+        <div className="bh-run-conclusion">
+          <div className="bh-conclusion-label"><span>RECOMMENDATION</span><span className="bh-posture">INTEGRATE</span></div>
+          <h2>Build the review layer.<br /><em>Keep the ATS.</em></h2>
+          <p>Connect to existing hiring tools; use Docling for document parsing. Review AGPL exposure before shipping.</p>
+        </div>
+        <div className="bh-workbench-foot">
+          <span><FileSearch aria-hidden="true" /> Research summary</span>
+          <span><GitBranch aria-hidden="true" /> Evidence-backed decision</span>
+          <a href="#investigation" aria-label="Read the research example">View case <ArrowUpRight aria-hidden="true" /></a>
+        </div>
       </aside>
     </section>
   );

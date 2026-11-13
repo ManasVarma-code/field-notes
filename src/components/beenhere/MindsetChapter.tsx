@@ -1,98 +1,57 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Boxes, Compass, GitFork, Scale } from "lucide-react";
+
+const researchLenses = [
+  {
+    number: "01",
+    icon: Compass,
+    title: "Map the landscape",
+    body: "Find the products people already use, the expectations they set, and the gaps still worth solving.",
+    signal: "PRODUCTS · PATTERNS · GAPS",
+  },
+  {
+    number: "02",
+    icon: Boxes,
+    title: "Find solid foundations",
+    body: "Surface useful libraries, APIs, and models. Check their fit, maintenance, and the terms they ship under.",
+    signal: "REPOS · APIS · LICENSES",
+  },
+  {
+    number: "03",
+    icon: GitFork,
+    title: "Borrow proven ideas",
+    body: "Look outside the obvious category for patterns from systems that have already solved a similar problem.",
+    signal: "ADJACENT FIELDS · SYSTEMS",
+  },
+  {
+    number: "04",
+    icon: Scale,
+    title: "Choose what to build",
+    body: "Turn the evidence into a practical posture: adopt, integrate, extend, fork, or build from scratch.",
+    signal: "A DECISION YOU CAN ACT ON",
+  },
+];
 
 export function MindsetChapter() {
-  const lenses = [
-    {
-      num: "01",
-      title: "Find the precedents.",
-      body: "Before proposing another software answer, survey the commercial and open-source landscape. Understand existing product paradigms, user expectations, and incumbent market barriers so you don't spend months building a product nobody switches to.",
-      tagline: "Prevent reinvention of settled interfaces.",
-    },
-    {
-      num: "02",
-      title: "Inspect what can be reused.",
-      body: "Audit existing open-source libraries, APIs, and models. BeenHere inspects recent commit activity, issue velocity, architectural fit, and copyleft/AGPL licensing terms before you write bespoke code.",
-      tagline: "Surface battle-tested code and flag legal landmines.",
-    },
-    {
-      num: "03",
-      title: "Look beyond the obvious category.",
-      body: "Break out of standard keyword bubbles. Borrow battle-tested patterns from neighboring technical disciplines—such as distributed systems consensus, bioinformatics diffing, or financial ledger immutability.",
-      tagline: "Cross-pollinate architectures from adjacent industries.",
-    },
-    {
-      num: "04",
-      title: "Decide what actually needs building.",
-      body: "Synthesize all evidence into an actionable architectural posture: Adopt existing tools, Fork an unmaintained repo, Integrate via APIs, Extend an existing framework, or Build custom from scratch.",
-      tagline: "Replace speculative debate with a concrete engineering posture.",
-    },
-  ];
-
   return (
-    <section
-      className="py-16 md:py-24 border-b border-border"
-      id="mindset"
-      aria-labelledby="mindset-title"
-    >
-      {/* Chapter Marker */}
-      <div className="flex items-center justify-between pb-8 border-b border-border text-[11px] font-mono text-muted-foreground uppercase tracking-widest">
-        <span className="flex items-center gap-2">
-          <span className="text-primary font-bold">03</span>
-          <span className="text-foreground">The Mindset</span>
-        </span>
-        <span>FOUR INVESTIGATIVE LENSES</span>
-      </div>
-
-      {/* Editorial Spread: Two-Column Monograph Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-12 items-start">
-        {/* Left Column: Thesis Statement */}
-        <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
-          <span className="font-mono text-xs uppercase tracking-wider text-primary font-bold">
-            HOW BEENHERE THINKS
-          </span>
-          <h2
-            id="mindset-title"
-            className="font-editorial text-4xl sm:text-5xl text-foreground font-normal leading-[1.08]"
-          >
-            Software design is largely an act of synthesis.
-          </h2>
-          <p className="font-sans text-sm sm:text-base text-muted-foreground leading-relaxed">
-            Most engineering hours are wasted constructing code that has already been elegantly
-            settled in an adjacent repository, an academic paper, or an established commercial
-            product. BeenHere equips your coding agent with the disciplined curiosity of a senior
-            research scientist.
-          </p>
-          <div className="pt-4 border-t border-border font-mono text-xs text-foreground/80 space-y-1">
-            <div>POSTURE TAXONOMY:</div>
-            <div className="text-primary font-semibold">
-              ADOPT · INTEGRATE · EXTEND · FORK · BUILD
-            </div>
-          </div>
+    <section className="bh-method" id="mindset" aria-labelledby="mindset-title">
+      <div className="bh-section-heading">
+        <div>
+          <span className="bh-section-kicker">THE RESEARCH METHOD</span>
+          <h2 id="mindset-title">Four checks before<br />the first commit.</h2>
         </div>
-
-        {/* Right Column: The 4 Lenses in Staggered Editorial Typography */}
-        <div className="lg:col-span-7 space-y-12">
-          {lenses.map((lens) => (
-            <article
-              key={lens.num}
-              className="space-y-3 pb-8 border-b border-border/60 last:border-b-0"
-            >
-              <div className="flex items-center gap-3">
-                <span className="font-mono text-xs font-bold text-primary">LENS {lens.num} //</span>
-                <span className="font-mono text-[10px] uppercase text-muted-foreground tracking-wider">
-                  {lens.tagline}
-                </span>
-              </div>
-              <h3 className="font-editorial text-2xl sm:text-3xl font-normal text-foreground">
-                {lens.title}
-              </h3>
-              <p className="font-sans text-sm sm:text-base text-foreground/80 leading-relaxed max-w-xl">
-                {lens.body}
-              </p>
-            </article>
-          ))}
-        </div>
+        <p>Good engineering starts with a clear picture of the terrain. BeenHere gives your agent a repeatable way to get one.</p>
       </div>
+      <div className="bh-lens-grid">
+        {researchLenses.map(({ number, icon: Icon, title, body, signal }) => (
+          <article key={number} className="bh-lens-card">
+            <div className="bh-lens-top"><span>{number}</span><Icon aria-hidden="true" /></div>
+            <h3>{title}</h3>
+            <p>{body}</p>
+            <span className="bh-lens-signal">{signal}</span>
+          </article>
+        ))}
+      </div>
+      <a className="bh-text-link" href="#invitation">Put the method in your agent <ArrowUpRight aria-hidden="true" /></a>
     </section>
   );
 }

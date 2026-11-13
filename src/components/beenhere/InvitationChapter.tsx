@@ -21,32 +21,32 @@ export function InvitationChapter() {
 
   return (
     <section
-      className="py-16 md:py-24 border-b border-border"
+      className="bh-install"
       id="invitation"
       aria-labelledby="invitation-title"
     >
       {/* Chapter Marker */}
-      <div className="flex items-center justify-between pb-8 border-b border-border text-[11px] font-mono text-muted-foreground uppercase tracking-widest">
+      <div className="bh-chapter-line flex items-center justify-between pb-8 border-b border-border text-[11px] font-mono text-muted-foreground uppercase tracking-widest">
         <span className="flex items-center gap-2">
           <span className="text-primary font-bold">04</span>
-          <span className="text-foreground">The Invitation</span>
+          <span className="text-foreground">Installation</span>
         </span>
         <span>INSTALLATION &amp; ACCESS</span>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-12 items-end">
+      <div className="bh-install-layout grid grid-cols-1 lg:grid-cols-12 gap-12 pt-12 items-end">
         {/* Left Column: Bold Headline */}
-        <div className="lg:col-span-6 space-y-6">
+        <div className="bh-install-copy lg:col-span-6 space-y-6">
           <span className="font-mono text-xs uppercase tracking-wider text-primary font-bold">
-            GET STARTED IN SECONDS
+          INSTALL FOR YOUR AGENT
           </span>
           <h2
             id="invitation-title"
             className="font-editorial text-4xl sm:text-6xl text-foreground font-normal leading-[1.02]"
           >
-            Research first.
+            Install once.
             <br />
-            <em className="text-primary italic font-normal">Build better.</em>
+            <em className="text-primary italic font-normal">Research on demand.</em>
           </h2>
           <p className="font-sans text-base text-foreground/80 leading-relaxed max-w-lg">
             Install BeenHere into your coding agent with a single command. Free, open-source under
@@ -66,7 +66,7 @@ export function InvitationChapter() {
         </div>
 
         {/* Right Column: Tactile Terminal Box */}
-        <div className="lg:col-span-6 border border-border bg-card p-6 rounded-xs space-y-4">
+        <div className="bh-install-panel lg:col-span-6 border border-border bg-card p-6 rounded-xs space-y-4">
           <div className="flex items-center justify-between border-b border-border pb-3">
             <div className="flex items-center gap-2 font-mono text-xs text-foreground font-semibold">
               <Terminal className="size-3.5 text-primary" aria-hidden="true" />

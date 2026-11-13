@@ -120,7 +120,7 @@ export function InvestigationChapter() {
 
   return (
     <section
-      className="py-16 md:py-24 border-b border-border"
+      className="bh-case-study"
       id="investigation"
       aria-labelledby="investigation-title"
     >
@@ -128,10 +128,10 @@ export function InvestigationChapter() {
       <div className="flex items-center justify-between pb-8 border-b border-border text-[11px] font-mono text-muted-foreground uppercase tracking-widest">
         <span className="flex items-center gap-2">
           <span className="text-primary font-bold">02</span>
-          <span className="text-foreground">The Investigation</span>
+          <span className="text-foreground">A real research run</span>
         </span>
         <div className="flex items-center gap-2 text-foreground font-semibold">
-          <span>CASE #014-CODEX</span>
+          <span>CODEX</span>
           <span className="text-primary">·</span>
           <span>RECRUITMENT PLATFORM</span>
         </div>
@@ -140,19 +140,17 @@ export function InvestigationChapter() {
       {/* Chapter Intro */}
       <div className="py-12 max-w-3xl space-y-4">
         <span className="font-mono text-xs uppercase tracking-wider text-primary font-bold">
-          EVIDENCE IN PRACTICE
+          RECRUITMENT PLATFORM · CASE STUDY
         </span>
         <h2
           id="investigation-title"
           className="font-editorial text-4xl sm:text-5xl lg:text-6xl text-foreground font-normal leading-tight"
         >
-          From vague ambition
-          <br />
-          to grounded architecture.
+          From broad idea<br />to buildable plan.
         </h2>
         <p className="font-sans text-base text-foreground/80 leading-relaxed">
-          How BeenHere investigated a real software idea inside OpenAI Codex. Trace the evidence
-          step-by-step from initial inquiry to the final build directive.
+          See how BeenHere moves from an AI recruitment idea through market context, reusable code,
+          and a licensing check to a focused technical decision.
         </p>
       </div>
 
@@ -161,7 +159,7 @@ export function InvestigationChapter() {
         {/* Navigation Selector */}
         <div className="lg:col-span-4 space-y-3">
           <div className="font-mono text-[10px] text-muted-foreground uppercase tracking-widest pb-2 border-b border-border">
-            INVESTIGATIVE CHRONOLOGY
+            RESEARCH STEPS
           </div>
           <div
             className="space-y-1.5"
@@ -197,10 +195,9 @@ export function InvestigationChapter() {
           </div>
 
           <div className="pt-6 border-t border-border font-mono text-[10px] text-muted-foreground space-y-2">
-            <div className="text-foreground font-semibold">VERIFIED TEST LOG</div>
+            <div className="text-foreground font-semibold">RUN THE FULL EXAMPLE</div>
             <p className="text-muted-foreground leading-normal font-sans text-xs">
-              This dossier documents an actual executed test run preserved in BeenHere's public
-              repository.
+              This walkthrough follows an executed Codex run, with the full log available in the repository.
             </p>
             <a
               href={SITE_CONFIG.links.codexTestEvidence}
@@ -208,7 +205,7 @@ export function InvestigationChapter() {
               rel="noreferrer"
               className="inline-flex items-center gap-1 text-primary hover:underline font-mono text-[10px] pt-1"
             >
-              Examine raw test markdown <ArrowUpRight className="size-3" aria-hidden="true" />
+              Read the full test log <ArrowUpRight className="size-3" aria-hidden="true" />
             </a>
           </div>
         </div>
